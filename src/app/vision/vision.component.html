@@ -25,7 +25,11 @@
     </div>
 
     <div class="growth-labels">
-      <div *ngFor="let label of labels"  class="stage-label" appearance="glass" >{{ label }} </div>
+      <div *ngFor="let label of labels"  class="stage-label" appearance="glass">
+
+       <span tuiStatus="{{label.status}}" ></span> {{ label.title }}
+
+      </div>
     </div>
   </section>
 

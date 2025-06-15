@@ -1,4 +1,4 @@
-import { TuiAvatar, TuiProgress } from '@taiga-ui/kit';
+import { TuiAvatar, TuiFade, TuiProgress } from '@taiga-ui/kit';
 import { TuiBadge } from '@taiga-ui/kit';
 import { TuiLet } from '@taiga-ui/cdk';
 import { TuiAppearance, TuiIcon } from '@taiga-ui/core';
@@ -8,6 +8,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { TuiArcChart } from '@taiga-ui/addon-charts';
 import { AsyncPipe } from '@angular/common';
 import { TuiAmountPipe } from '@taiga-ui/addon-commerce';
+import {TuiStatus} from '@taiga-ui/kit';
 @Component({
   imports: [
     TuiProgress,
@@ -20,7 +21,9 @@ import { TuiAmountPipe } from '@taiga-ui/addon-commerce';
     AsyncPipe,
     TuiAmountPipe,
     TuiArcChart,
-    TuiAppearance
+    TuiAppearance,
+    TuiStatus,
+    TuiFade
   ],
     selector: 'app-vision',
     standalone:true,
@@ -32,10 +35,23 @@ import { TuiAmountPipe } from '@taiga-ui/addon-commerce';
 export class VisionComponent {
   readonly value = [15, 25, 35, 25];
   readonly labels = [
-    'Early Adopters',
-    'Campus Dominance',
-    'National Expansion',
-    'Global Ecosystem',
+    {
+      title:'Early Adopters',
+      status:'blue'
+    },
+
+    {
+      title:'Campus Dominance',
+      status:'pink'
+    },
+    {
+      title:'National Expansion',
+      status:'grey'
+    },
+    {
+      title:'Global Ecosystem',
+      status:'yellow'
+    }
   ];
   revenueStreams = [
     {
