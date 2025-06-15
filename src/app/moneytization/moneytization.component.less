@@ -1,0 +1,49 @@
+.moneytization-container {
+  background: url('/ooorganize.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 40px;
+  min-height: 100vh;
+  text-align: center;
+
+  .section-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  }
+
+  .stream-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .liquid-card {
+    position: relative;
+    width: 400px;
+    min-height: 200px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease;
+
+    h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #00ffe7;
+    }
+
+    .desc {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<nav class="glassmorphism-navbar fixed-top ">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="brand" href="#">Levela</a>
+    <div class="menu-icon" [class.open]="isMenuOpen" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" [class.active]="isMenuOpen">
+      <li><a href="#problem">Problem</a></li>
+      <li><a href="#solution">Solution</a></li>
+      <li><a href="#market-opportunity">Market</a></li>
+      <li><a href="#why-now">Why Now</a></li>
+      <li><a href="#monetization">Monetization</a></li>
+      <li><a href="#vision">Vision</a></li>
+      <li><a href="#founder">Founder</a></li>
+      <li><a class="cta" href="#early-access">Get Involved</a></li>
+    </ul>
+  </div>
+</nav>
+<br>

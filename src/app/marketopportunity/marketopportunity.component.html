@@ -1,0 +1,14 @@
+<svg style="display:none; background-color: black;">
+  <filter id="liquidWave" x="0" y="0" width="200%" height="200%" primitiveUnits="objectBoundingBox">
+    <feTurbulence id="turbulence" baseFrequency="0.02 0.03" numOctaves="2" result="turbulence" seed="2" />
+    <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="10" xChannelSelector="R" yChannelSelector="G"/>
+    <animate xlink:href="#turbulence" attributeName="baseFrequency" dur="6s" values="0.02 0.03;0.03 0.02;0.02 0.03" repeatCount="indefinite" />
+  </filter>
+</svg>
+<div class="cards-container" style="background: url('ooorganize.jpg'); background-position: center;background-repeat: no-repeat;background-size: cover;">
+  <div class="liquid-card" *ngFor="let card of cards">
+    <h3>{{ card.title }}</h3>
+    <p>{{ card.target | number }}</p>
+  </div>
+</div>
+

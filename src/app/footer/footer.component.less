@@ -1,0 +1,127 @@
+.site-footer {
+    inset: 0;
+    background:
+      radial-gradient(circle at center, rgba(0, 255, 200, 0.15), transparent 70%),
+      linear-gradient(135deg, #121212, #1a1a1a);
+    filter: brightness(0.85);
+    z-index: 1;
+  backdrop-filter: saturate(180%) blur(24px);
+  -webkit-backdrop-filter: saturate(180%) blur(24px);
+  border-top: 0px solid transparent;
+  color: #a0aec0;
+  font-family: 'Inter', sans-serif;
+  padding: 4rem 2rem;
+  user-select: none;
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .footer-brand {
+    flex: 1 1 250px;
+
+    h2 {
+      font-weight: 900;
+      font-size: 2.2rem;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow:
+        0 0 8px rgba(14, 165, 233, 0.7),
+        0 0 15px rgba(14, 165, 233, 0.5);
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #718096;
+      letter-spacing: 0.03em;
+      margin: 0;
+    }
+  }
+
+  .footer-navigation {
+    flex: 2 1 400px;
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+
+    a {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #94a3b8;
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 4px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #3b82f6;
+        &::after {
+          width: 100%;
+          box-shadow:
+            0 0 8px #3b82f6,
+            0 0 16px #06b6d4;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 0;
+        background: #3b82f6;
+        transition: width 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  .footer-social {
+    flex: 1 1 180px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+
+    a {
+      width: 28px;
+      height: 28px;
+      display: block;
+      filter: grayscale(60%);
+      transition: filter 0.3s ease, transform 0.3s ease;
+      position: relative;
+
+      &.icon-twitter {
+        background: url('/path-to-icons/twitter.svg') no-repeat center / contain;
+      }
+      &.icon-linkedin {
+        background: url('/path-to-icons/linkedin.svg') no-repeat center / contain;
+      }
+      &.icon-instagram {
+        background: url('/path-to-icons/instagram.svg') no-repeat center / contain;
+      }
+
+      &:hover {
+        filter: none;
+        transform: scale(1.15);
+        filter: drop-shadow(0 0 5px #3b82f6);
+      }
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #64748b;
+    letter-spacing: 0.05em;
+  }
+}

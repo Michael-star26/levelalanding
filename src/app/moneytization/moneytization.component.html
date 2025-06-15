@@ -1,0 +1,9 @@
+<div class="moneytization-container">
+  <h1 class="section-title">Moneytization</h1>
+  <div class="stream-list">
+    <div class="liquid-card" *ngFor="let stream of revenueStreams">
+      <h2>{{ stream.stream }}</h2>
+      <p class="desc">{{ stream.description }}</p>
+    </div>
+  </div>
+</div>

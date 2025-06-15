@@ -1,0 +1,33 @@
+<section class="business-model">
+  <div class="header">
+    <h1>Business Model</h1>
+    <p>Levela’s monetization engine blends modern marketplaces with real campus economy.</p>
+  </div>
+
+  <div class="revenue-streams">
+    <div class="stream" *ngFor="let stream of revenueStreams">
+      <div class="icon-wrapper">
+        <tui-icon [icon]="stream.icon" ></tui-icon>
+      </div>
+      <h3>{{ stream.title }}</h3>
+      <p>{{ stream.desc }}</p>
+    </div>
+  </div>
+
+  <section class="growth-section" tuiCardLarge style="background-image: url('chartbg.jpg');background-position: center;background-repeat: no-repeat;background-attachment: fixed;background-size: cover;">
+    <h2>Levela Growth Vision</h2>
+
+    <div class="arc-wrapper">
+      <tui-arc-chart size="xl" [value]="value" [max]="100">
+        <span class="stat">{{ 50000000 | tuiAmount: 'USD' | async }}</span>
+        <div class="stat">Global Target</div>
+      </tui-arc-chart>
+    </div>
+
+    <div class="growth-labels">
+      <div *ngFor="let label of labels"  class="stage-label" appearance="glass" >{{ label }} </div>
+    </div>
+  </section>
+
+</section>
+

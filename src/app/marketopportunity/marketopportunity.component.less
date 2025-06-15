@@ -1,0 +1,64 @@
+.liquid-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15); /* translucent white */
+  backdrop-filter: blur(12px); /* blur what's behind */
+  -webkit-backdrop-filter: blur(12px); /* Safari */
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  overflow: hidden;
+  padding: 40px 48px;  /* increased padding for bigger cards */
+  color: white;
+  user-select: none;
+  cursor: default;
+  transition: transform 0.3s ease;
+  width: 320px;  /* increased width */
+  min-height: 220px; /* set minimum height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.liquid-card:hover {
+  transform: scale(1.05);
+}
+
+
+.liquid-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.2), transparent 70%);
+  filter: url(#liquidWave);
+  animation: waveMove 6s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+
+.liquid-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes waveMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+.cards-container {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
