@@ -1,8 +1,9 @@
 import { Component, AfterViewInit, HostListener } from '@angular/core';
+import { TuiCardLarge } from '@taiga-ui/layout';
 
 @Component({
   selector: 'app-herosection',
-  imports: [],
+  imports: [TuiCardLarge],
   templateUrl: './herosection.component.html',
   styleUrl: './herosection.component.less'
 })

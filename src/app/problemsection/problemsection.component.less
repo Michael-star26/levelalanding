@@ -1,14 +1,16 @@
 .problem-section {
   width: 100vw;
   padding: 4rem 2rem;
-  color: #e0e7ff;
+  color: #e0f7f1;
   font-family: 'Inter', sans-serif;
   position: relative;
 
   background: linear-gradient(135deg, #121212 0%, #1c1c27 50%, #121212 100%);
-  background-size: 400% 100%;
-  background-position: 0% 0%;
-  transition: background-position 0.3s ease;
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 255, 200, 0.15);
+  transition: all 0.3s ease;
 
   .container {
     max-width: 1200px;
@@ -22,6 +24,9 @@
     background: linear-gradient(135deg, #00FFC8, #007CF0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow:
+      0 0 20px rgba(0, 255, 200, 0.6),
+      0 0 40px rgba(0, 124, 240, 0.4);
     text-align: center;
   }
 
@@ -38,19 +43,26 @@
       padding: 2.5rem 2rem;
       backdrop-filter: blur(16px);
       border: 1px solid rgba(0, 255, 200, 0.25);
-      box-shadow: none;
-      transition: background-color 0.3s ease;
+      box-shadow: 0 8px 32px rgba(0, 255, 200, 0.15);
+      transition: all 0.3s ease;
 
       &:hover {
         background: rgba(20, 20, 20, 0.45);
         border-color: #00FFC8;
+        box-shadow: 0 12px 36px rgba(0, 255, 200, 0.4);
+        transform: translateY(-5px);
       }
 
       .problem-title {
-        font-size: 1.6rem;
-        font-weight: 700;
+        font-size: 1.8rem;
+        font-weight: 800;
         margin-bottom: 1rem;
-        color: #a8d8ff;
+        background: linear-gradient(135deg, #00FFC8, #007CF0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow:
+          0 0 16px rgba(0, 255, 200, 0.6),
+          0 0 24px rgba(0, 124, 240, 0.4);
       }
 
       .problem-desc {
@@ -77,6 +89,7 @@
     font-size: 2.2rem;
   }
 }
+
 // .problem-card {
 //   transition: transform 0.3s ease, box-shadow 0.3s ease;
 

@@ -1,9 +1,159 @@
-<div class="moneytization-container">
-  <h1 class="section-title">Moneytization</h1>
-  <div class="stream-list">
-    <div class="liquid-card" *ngFor="let stream of revenueStreams">
-      <h2>{{ stream.stream }}</h2>
-      <p class="desc">{{ stream.description }}</p>
+<div class="carousel-wrapper desktop">
+  <div class="section-title">
+    <h2>Implementation Roadmap</h2>
+    <p>We’re systematically rolling out our core solutions, some fully active, others strategically in the pipeline.</p>
+  </div>
+
+  <div tuiCarouselButtons class="carousel-container">
+    <button
+      iconStart="@tui.chevron-left"
+      tuiIconButton
+      type="button"
+      aria-label="Previous slide"
+      (click)="carousel.prev()"
+    >
+      Previous
+    </button>
+
+    <!--  -->
+    <svg style="display:none; background-color: black;">
+      <filter id="liquidWave" x="0" y="0" width="200%" height="200%" primitiveUnits="objectBoundingBox">
+        <feTurbulence id="turbulence" baseFrequency="0.02 0.03" numOctaves="2" result="turbulence" seed="2" />
+        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="10" xChannelSelector="R" yChannelSelector="G"/>
+        <animate xlink:href="#turbulence" attributeName="baseFrequency" dur="6s" values="0.02 0.03;0.03 0.02;0.02 0.03" repeatCount="indefinite" />
+      </filter>
+    </svg>
+    <!--  -->
+
+    <tui-carousel #carousel class="item cards-container" tuiCardLarge [itemsCount]="2" >
+      <!-- Housing Program - Available -->
+      <div *tuiItem tuiCardLarge tuiAppearance="positive" class="liquid-card">
+        <div class="coming-soon-badge">
+          <tui-badge class="custom" appearance="custom"><tui-icon icon="@tui.target" /> Available</tui-badge>
+        </div>
+        <h2 class="title"> Student Housing Program</h2>
+        <p class="desc" tuiAppearance="" >
+          Find affordable, verified student housing options near campus. Roommate matching and lease management included. <br><br>
+        </p>
+        <button appearance="positive" tuiButton type="button" >
+          Explore Now
+        </button>
+      </div>
+
+      <!-- Student eCommerce Platform - Coming Soon -->
+      <div *tuiItem class="locked liquid-card" tuiCardLarge tuiAppearance="warning">
+        <div class="coming-soon-badge">
+          <tui-badge appearance="warning"><tui-icon icon="@tui.lock" />Coming Soon</tui-badge>
+        </div>
+        <h2 class="title">Student eCommerce Platform</h2>
+        <p class="desc">
+          Buy, sell, and resell new and secondhand items within your campus community, secure payments & messaging.
+        </p>
+        <button tuiButton type="button" disabled>
+          Coming Soon
+        </button>
+      </div>
+
+      <!-- Essential Services Marketplace - Coming Soon -->
+      <div *tuiItem class=" locked liquid-card" tuiCardLarge tuiAppearance="negative">
+        <div class="coming-soon-badge">
+          <tui-badge appearance="negative"><tui-icon icon="@tui.lock" />Coming Soon</tui-badge>
+        </div>
+        <h2 class="title">Essential Services Marketplace</h2>
+        <p class="desc">
+          Affordable laundry, food delivery, and more, designed specifically for students on a budget. <br><br>
+        </p>
+        <button tuiButton type="button"  disabled>
+          Coming Soon
+        </button>
+      </div>
+    </tui-carousel>
+
+    <button
+      iconStart="@tui.chevron-right"
+      tuiIconButton
+      type="button"
+      aria-label="Next slide"
+      (click)="carousel.next()"
+    >
+      Next
+    </button>
+  </div>
+</div>
+
+
+
+<div class="carousel-wrapper mobile">
+  <div class="section-title">
+    <h2>Implementation Roadmap</h2>
+    <p>We’re systematically rolling out our core solutions, some fully active, others strategically in the pipeline.</p>
+  </div>
+
+  <div tuiCarouselButtons class="carousel-container">
+    <div class="d-flex m-auto">
+      <button
+      iconStart="@tui.chevron-left"
+      tuiIconButton
+      type="button"
+      aria-label="Previous slide"
+      (click)="carousel2.prev()"
+    >
+      Previous
+    </button>
+    <button
+      iconStart="@tui.chevron-right"
+      tuiIconButton
+      type="button"
+      aria-label="Next slide"
+      (click)="carousel2.next()"
+    >
+      Next
+    </button>
     </div>
+    <tui-carousel #carousel2 class="item" tuiCardLarge [itemsCount]="1" [draggable]="true" [duration]="2000" >
+      <!-- Housing Program - Available -->
+      <div *tuiItem tuiCardLarge tuiAppearance="positive" class="liquid-card">
+        <div class="coming-soon-badge">
+          <tui-badge class="custom" appearance="custom"><tui-icon icon="@tui.target" /> Available</tui-badge>
+        </div>
+        <h2 class="title"> Student Housing Program</h2>
+        <p class="desc">
+          Find affordable, verified student housing options near campus. Roommate matching and lease management included. <br><br>
+        </p>
+        <button appearance="positive" tuiButton type="button" >
+          Explore Now
+        </button>
+      </div>
+
+      <!-- Student eCommerce Platform - Coming Soon -->
+      <div *tuiItem class="locked liquid-card" tuiCardLarge tuiAppearance="warning">
+        <div class="coming-soon-badge">
+          <tui-badge appearance="warning"><tui-icon icon="@tui.lock" />Coming Soon</tui-badge>
+        </div>
+        <h2 class="title">Student eCommerce Platform</h2>
+        <p class="desc">
+          Buy, sell, and resell new and secondhand items within your campus community, secure payments & messaging.
+        </p>
+        <button tuiButton type="button" disabled>
+          Coming Soon
+        </button>
+      </div>
+
+      <!-- Essential Services Marketplace - Coming Soon -->
+      <div *tuiItem class=" locked liquid-card" tuiCardLarge tuiAppearance="negative">
+        <div class="coming-soon-badge">
+          <tui-badge appearance="negative"><tui-icon icon="@tui.lock" />Coming Soon</tui-badge>
+        </div>
+        <h2 class="title">Essential Services Marketplace</h2>
+        <p class="desc">
+          Affordable laundry, food delivery, and more, designed specifically for students on a budget. <br><br>
+        </p>
+        <button tuiButton type="button"  disabled>
+          Coming Soon
+        </button>
+      </div>
+    </tui-carousel>
+
+
   </div>
 </div>
