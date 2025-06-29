@@ -1,92 +1,178 @@
-.problem-section {
-  width: 100vw;
-  padding: 4rem 2rem;
-  color: #e0f7f1;
-  font-family: 'Inter', sans-serif;
-  position: relative;
+@media screen {
+  @media (min-width: 769px) {
+    .mobile{
+      display: none;
+    }
+    .problem-section {
+      width: 100vw;
+      padding: 4rem 2rem;
+      color: #e0f7f1;
+      font-family: 'Inter', sans-serif;
+      position: relative;
 
-  background: linear-gradient(135deg, #121212 0%, #1c1c27 50%, #121212 100%);
-  backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 32px rgba(0, 255, 200, 0.15);
-  transition: all 0.3s ease;
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .section-header {
-    font-size: 3rem;
-    font-weight: 900;
-    margin-bottom: 3rem;
-    background: linear-gradient(135deg, #00FFC8, #007CF0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow:
-      0 0 20px rgba(0, 255, 200, 0.6),
-      0 0 40px rgba(0, 124, 240, 0.4);
-    text-align: center;
-  }
-
-  .problems-wrapper {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    .problem-card {
-      flex: 1 1 320px;
-      background: rgba(20, 20, 20, 0.3);
-      border-radius: 20px;
-      padding: 2.5rem 2rem;
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(0, 255, 200, 0.25);
+      background: linear-gradient(135deg, #121212 0%, #1c1c27 50%, #121212 100%);
+      backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       box-shadow: 0 8px 32px rgba(0, 255, 200, 0.15);
       transition: all 0.3s ease;
 
-      &:hover {
-        background: rgba(20, 20, 20, 0.45);
-        border-color: #00FFC8;
-        box-shadow: 0 12px 36px rgba(0, 255, 200, 0.4);
-        transform: translateY(-5px);
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
       }
 
-      .problem-title {
-        font-size: 1.8rem;
-        font-weight: 800;
-        margin-bottom: 1rem;
+      .section-header {
+        font-size: 3rem;
+        font-weight: 900;
+        margin-bottom: 3rem;
         background: linear-gradient(135deg, #00FFC8, #007CF0);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-shadow:
-          0 0 16px rgba(0, 255, 200, 0.6),
-          0 0 24px rgba(0, 124, 240, 0.4);
+          0 0 20px rgba(0, 255, 200, 0.6),
+          0 0 40px rgba(0, 124, 240, 0.4);
+        text-align: center;
       }
 
-      .problem-desc {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        color: #d0e8ff;
+      .problems-wrapper {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .problem-card {
+          flex: 1 1 320px;
+          background: rgba(20, 20, 20, 0.3);
+          border-radius: 20px;
+          padding: 2.5rem 2rem;
+          backdrop-filter: blur(16px);
+          border: 1px solid rgba(0, 255, 200, 0.25);
+          box-shadow: 0 8px 32px rgba(0, 255, 200, 0.15);
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: rgba(20, 20, 20, 0.45);
+            border-color: #00FFC8;
+            box-shadow: 0 12px 36px rgba(0, 255, 200, 0.4);
+            transform: translateY(-5px);
+          }
+
+          .problem-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #00FFC8, #007CF0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow:
+              0 0 16px rgba(0, 255, 200, 0.6),
+              0 0 24px rgba(0, 124, 240, 0.4);
+          }
+
+          .problem-desc {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #d0e8ff;
+        }
       }
     }
+  }
   }
 }
-
 /* Responsive tweaks */
-@media (max-width: 768px) {
-  .problems-wrapper {
-    flex-direction: column;
-    align-items: center;
+@media screen {
+  @media (max-width: 768px) {
+    .m-problems-wrapper {
+      flex-direction: column;
+      align-items: center;
 
-    .problem-card {
-      max-width: 90vw;
+      .m-problem-card {
+        max-width: 90vw;
+      }
     }
-  }
 
-  .section-header {
-    font-size: 2.2rem;
+    .m-section-header {
+      font-size: 2.2rem;
+    }
+    .desktop{
+      display: none;
+    }
+    .m-problem-section {
+      width: 100vw;
+      padding: 4rem 2rem;
+      color: #e0f7f1;
+      font-family: 'Inter', sans-serif;
+      position: relative;
+
+      background: linear-gradient(135deg, #121212 0%, #1c1c27 50%, #121212 100%);
+      backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 32px rgba(0, 255, 200, 0.15);
+      transition: all 0.3s ease;
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .m-section-header {
+        font-size: 3rem;
+        font-weight: 900;
+        margin-bottom: 3rem;
+        background: linear-gradient(135deg, #00FFC8, #007CF0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow:
+          0 0 20px rgba(0, 255, 200, 0.6),
+          0 0 40px rgba(0, 124, 240, 0.4);
+        text-align: center;
+      }
+
+      .m-problems-wrapper {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .m-problem-card {
+          flex: 1 1 320px;
+          background: rgba(20, 20, 20, 0.3);
+          border-radius: 20px;
+          padding: 2.5rem 2rem;
+          backdrop-filter: blur(16px);
+          border: 1px solid rgba(0, 255, 200, 0.25);
+          box-shadow: 0 8px 32px rgba(0, 255, 200, 0.15);
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: rgba(20, 20, 20, 0.45);
+            border-color: #00FFC8;
+            box-shadow: 0 12px 36px rgba(0, 255, 200, 0.4);
+            transform: translateY(-5px);
+          }
+
+          .m-problem-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #00FFC8, #007CF0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow:
+              0 0 16px rgba(0, 255, 200, 0.6),
+              0 0 24px rgba(0, 124, 240, 0.4);
+          }
+
+          .m-problem-desc {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #d0e8ff;
+          }
+        }
+      }
+    }
   }
 }
 
